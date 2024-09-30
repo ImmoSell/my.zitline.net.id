@@ -17,7 +17,7 @@ const getPaket = async (req,res) => {
     try{
     const response = await Paket.findOne()
     where: {
-      params: req.params.id
+      id: req.params.id
       }
 
       if (response){
@@ -33,7 +33,7 @@ const getPaket = async (req,res) => {
 
   const createPaket = async (req,res) => {
     try {
-      const create = await Paket.create = req.body
+      const create = await Paket.create(req.body)
 
       if(create){
         res.status(201).json({message: "berhasil membuat data paket"})       
@@ -42,7 +42,32 @@ const getPaket = async (req,res) => {
         res.status(400).json({message: "gagal membuat data paket"})
         catch (err) {
           res.status(400).json({message: `terjadi kesalahan server error ${err}`
-                               }
+       }
+
+      // mengedit data paket berdasarkan id
+    const editPaket = async (req,res) => {
+      try {
+        const edit = await Paket.update(req.body, {
+          where: {
+            id: req.params.id
+          },
+
+          if (edit) {
+            res.status(200).json(`berhasil mengubah data paket`)
+          }else {
+          res.status(400).json(`gagal mengubah data paket`)
+          }
+        })
+      }catch (err) {
+          res.status(400).json(`gagal memuat server ${err}`
+      }
+        
+      
+
+
+      
+
+                               
                           
 
       
