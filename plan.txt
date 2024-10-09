@@ -5,6 +5,7 @@ rencana tahun 2024
 * backend nodejS dan expressJs
 * vite
 * database noSQL dan mySQL
+* add grafik chart graphQL
 - website perapihan kabel apjii
 * library nextJs
 * backend nodeJs dan expressJs
