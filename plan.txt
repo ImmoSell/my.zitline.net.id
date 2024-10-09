@@ -1,4 +1,13 @@
 rencana tahun 2024
 
 - website admin company
+* library react
+* backend nodejS dan expressJs
+* vite
+* database noSQL dan mySQL
 - website perapihan kabel apjii
+* library nextJs
+* backend nodeJs dan expressJs
+* vite
+* database noSQL
+* set state global (redis)
