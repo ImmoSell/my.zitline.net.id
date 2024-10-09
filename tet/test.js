@@ -9,3 +9,10 @@ function FetchData(callback) => {
 
   console.log("end");
 }
+
+
+async function userData() => {
+  const response = await fetch("https://jsonplaceholder.org/posts/1")
+  const data = response.json()
+  console.log(data)
+}
